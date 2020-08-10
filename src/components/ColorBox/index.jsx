@@ -1,5 +1,7 @@
+import 'Hello.js';
 import React, { useState } from 'react';
 import './ColorBox.scss';
+
 function getRandomColor() {
     const COLOR_LIST = ['deeppink','green','yellow','black','blue']
     const randomIndex = Math.trunc(Math.random() * 5);
