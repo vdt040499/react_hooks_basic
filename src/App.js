@@ -9,6 +9,7 @@ import Pagination from './components/Pagination/index';
 import PostFiltersForm from './components/PostFiltersForm/index';
 import Clock from './components/Clock/index';
 import BetterClock from './components/BetterClock/index';
+import MagicBox from './components/MagicBox';
 
 function App() {
 
@@ -102,9 +103,10 @@ function App() {
       <PostList posts={postList}/>
       <Pagination pagination={pagination} onPageChange={handlePageChange}/> */}
 
-      { showClock && <Clock/>}
-      <BetterClock/>
-      <button onClick={() => setShowClock(false)}>Hide Clock</button>
+      {/* { showClock && <Clock/>} */}
+      {/* <BetterClock/> */}
+      {/* <button onClick={() => setShowClock(false)}>Hide Clock</button> */}
+      <MagicBox/>
     </div>
   );
 }
