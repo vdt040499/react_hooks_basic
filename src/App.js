@@ -7,6 +7,7 @@ import './App.scss';
 import PostList from './components/PostList/index';
 import Pagination from './components/Pagination/index';
 import PostFiltersForm from './components/PostFiltersForm/index';
+import Clock from './components/Clock/index';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
     _limit: 10,
     _page: 1,
   });
+  const [showClock, setShowClock] = useState(true);
 
   useEffect(() => {
     async function fetchPostList() {
@@ -94,9 +96,13 @@ function App() {
     <div className="app">
       {/* <ToDoForm onSubmit={handleToDoFormSubmit}/> */}
       {/* <ToDoList todos={toDoList} onToDoClick={handleToDoClick}/> */}
-      <PostFiltersForm onSubmit={handleFiltersChange}/>
+      
+      {/* <PostFiltersForm onSubmit={handleFiltersChange}/>
       <PostList posts={postList}/>
-      <Pagination pagination={pagination} onPageChange={handlePageChange}/>
+      <Pagination pagination={pagination} onPageChange={handlePageChange}/> */}
+
+      { showClock && <Clock/>}
+      <button onClick={() => setShowClock(false)}>Hide Clock</button>
     </div>
   );
 }
